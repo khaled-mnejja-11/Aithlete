@@ -1,0 +1,143 @@
+:root {
+    /* DARK THEME (Default) */
+    --bg-color: #000000;
+    --text-color: #EEEEEE;
+    --primary-color: #3A3A3A; /* Darker button */
+    --accent-color: #BFBFBF;
+    --button-text: #FFFFFF;
+  }
+  
+  [data-theme='light'] {
+    /* LIGHT THEME - Inverted from dark */
+    --bg-color: #FFFFFF;
+    --text-color: #3F3F3F;
+    --primary-color: #E0E0E0;
+    --accent-color: #3F3F3F;
+    --button-text: #000000;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', sans-serif;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .logo-img {
+    height: 120px;
+    object-fit: contain;
+  }
+  .svg-logo {
+    height: 200px;
+    object-fit: contain;
+    transition: filter 0.3s ease;
+  }
+  
+  /* Invert for dark theme */
+  [data-theme='dark'] .svg-logo {
+    filter: invert(1) hue-rotate(180deg);
+  }
+  
+  /* Normal for light theme */
+  [data-theme='light'] .svg-logo {
+    filter: none;
+  }
+  
+  @media (max-width: 700px) {
+    .svg-logo {
+      height: 200px;
+    }
+  }
+  
+  .theme-toggle {
+    background-color: var(--primary-color);
+    color: var(--button-text);
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .intro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+  
+  .text-content {
+    flex: 1 1 400px;
+  }
+  
+  .text-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .text-content span {
+    color: var(--accent-color);
+  }
+  
+  .text-content p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    line-height: 1.6;
+  }
+  
+  .cta-btn {
+    background-color: var(--primary-color);
+    color: var(--button-text);
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s ease;
+  }
+  
+  .cta-btn:hover {
+    opacity: 0.9;
+  }
+  
+  .mockup {
+    flex: 1 1 400px;
+    max-width: 600px;
+  }
+  
+  .mockup img,
+  .mockup iframe {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .intro {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .mockup {
+      max-width: 100%;
+    }
+  
+    .logo-img {
+      height: 120px;
+    }
+  }
+  
