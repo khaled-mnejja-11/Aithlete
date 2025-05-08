@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIthlete - Your AI Fitness Coach</title>
+  <link rel="stylesheet" href="C:\Users\user\Documents\IIT\1ére ANNEE GLSI 2\2éme SEMESTRE\Culture Et Compétence Numérique\Projet\css\style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="file:///C:/Users/user/Downloads/Aithlete_LOGO.jpeg-removebg-preview.svg" alt="AIthlete Logo" class="logo-img" />
+    </div>
+    <button class="theme-toggle" onclick="toggleTheme()">THEME</button>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div class="text-content">
+        <h1>Train Smarter with <span>AIthlete</span></h1>
+        <p>Your personalized AI-powered fitness coach. Work with pros. Reach your goals.</p>
+        <a href="#login" class="cta-btn">Get Started</a>
+      </div>
+      <div class="mockup">
+        <!-- Figma Embed -->
+        <iframe
+          style="border: none;"
+          width="100%"
+          height="500"
+          src="https://www.figma.com/proto/your-prototype-link-here"
+          allowfullscreen
+        ></iframe>
+        <!-- OR: Replace with an image
+        <img src="mockup.png" alt="AIthlete App Mockup" />
+        -->
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function toggleTheme() {
+      const root = document.documentElement;
+      const isDark = root.getAttribute('data-theme') === 'dark';
+      root.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    }
+  </script>
+</body>
+</html>
